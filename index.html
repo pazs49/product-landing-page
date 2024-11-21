@@ -12,29 +12,29 @@
 
 <body>
     <div class="background-image"></div>
-    <div class="landing-page">
-        <div class="heading">
-            <header>
-                <div class="logo-text">Stanley's Mind Odyssey</div>
-            </header>
-            <div class="menu">
-                <ul>
-                    <li><a href="#about-me">About Me</a></li>
-                    <li><a href="#updates">Updates</a></li>
-                    <li><a href="#contact-us">Contact Us</a></li>
-                    <li><a href="#download-page">Download Page</a></li>
-                </ul>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#about-me">About Me</a></li>
-                    <li><a href="#updates">Updates</a></li>
-                    <li><a href="#contact-us">Contact Us</a></li>
-                    <li><button class="button-primary"><a href="#download-page">Download Page</a></button></li>
-                </ul>
-                <div class="hamburger">☰</div>
-            </nav>
+    <div class="heading">
+        <header>
+            <div class="logo-text">Stanley's Mind Odyssey</div>
+        </header>
+        <div class="menu">
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#updates">Updates</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+                <li><a href="#download-page">Download Page</a></li>
+            </ul>
         </div>
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#updates">Updates</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+                <li><button class="button-primary"><a href="#download-page">Download Page</a></button></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </nav>
+    </div>
+    <div class="landing-page">
         <div class="hero">
             <div class="h1 width-75 text-center">
                 Sharpen Your Mind, Anytime – Puzzle Your Way to Fun!
@@ -42,7 +42,7 @@
             <div class="big-button">
                 <a href="">Download</a>
             </div>
-            <div class="hero-images">
+            <div id="video" class="hero-images">
                 <iframe src="https://www.youtube.com/embed/ODojaBms2Pw"
                     title="How I made a 2D man vs dino game in Unity? Timelapse process + Commentary" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -57,7 +57,7 @@
         </div>
     </div>
 
-    <div id="about-me" class="page">
+    <div id="about-me" class="page margin-scroll-top">
         <h2 class="h2 width-75 margin-top-3">Meet the Developer</h2>
         <div class="profile flex flex-column flex-vertical-center">
             <img class="profile-picture" src="../assets/images/dev-photo.jpg" alt="">
@@ -79,7 +79,7 @@
         </div>
     </div>
 
-    <div id="updates" class="page">
+    <div id="updates" class="page margin-scroll-top">
         <h2 class="h2 width-75 margin-top-1">Updates</h2>
         <div id="update-container">
             <div class="update-card width-75 margin-top-1">
@@ -142,12 +142,12 @@
         </div>
     </div>
 
-    <div id="contact-us" class="page margin-top-2">
+    <div id="contact-us" class="page margin-top-2 margin-scroll-top">
         <h2 class="h2 width-75 margin-top-1">Contact Us</h2>
         <div class="width-75">
             <h3 class="h3 flex flex-horizontal-center">Any Suggestions you want us to implement?</h3>
-            <form action="#">
-                <input type="email" name="" id="" placeholder="Enter email" class="margin-top-2">
+            <form id="form" action="#">
+                <input type="email" name="" id="email" placeholder="Enter email" class="margin-top-2">
                 <textarea name="" id="" rows="10" cols="10" placeholder="Enter suggestion"
                     class="margin-top-2"></textarea>
                 <input type="button" value="Submit" class="margin-top-2">
@@ -155,7 +155,7 @@
         </div>
     </div>
 
-    <div id="download-page" class="page">
+    <div id="download-page" class="page margin-scroll-top">
         <h2 class="h2 width-75 margin-top-3">Download Page</h2>
         <div class="flex flex-column flex-vertical-center flex-horizontal-center width-75 height-75 gap-1">
             <button class="button-download">Download on Google Play</button>

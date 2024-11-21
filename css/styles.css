@@ -7,6 +7,10 @@
   --form-background-color: #f7eaee;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0 10rem;
   color: var(--primary-color);
@@ -83,12 +87,22 @@ a:visited {
   display: none;
 }
 
+.menu ul li {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dotted var(--primary-color);
+}
+
 .heading {
   display: flex;
 
   justify-content: space-between;
 
-  width: 100%;
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  background-color: rgba(255, 198, 198, 0.8);
+
+  z-index: 10;
 }
 
 .logo-text {
@@ -159,11 +173,104 @@ iframe {
   height: 100vh;
 }
 
-/* media queries */
+/* Tablet */
+@media (max-width: 1230px) {
+  body {
+    margin: 0 auto;
+  }
 
+  .margin-scroll-top {
+    scroll-margin-top: 2rem;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--secondary-color);
+
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border-radius: 5px;
+
+    overflow: hidden;
+    height: 0px;
+    transition: height 0.5s ease;
+  }
+
+  .menu.active {
+    height: 200px;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .heading {
+    padding: 0.5rem 1rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .landing-page {
+    justify-content: flex-start;
+    height: 100%;
+  }
+
+  iframe {
+    width: 80%;
+    height: 100%;
+  }
+
+  .hero-images {
+    height: 500px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-image {
+    width: 80%;
+    height: 40%;
+  }
+
+  .hero-image:nth-child(2) {
+    display: none;
+  }
+
+  /* About me */
+  #about-me-description {
+    font-size: 24px;
+  }
+
+  .profile-picture {
+    width: 50%;
+    height: 50%;
+  }
+
+  /* Download Page */
+  .button-download,
+  .button-secondary-download {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+}
+
+/* media queries */
+/* Smartphone */
 @media (max-width: 375px) {
   body {
-    color: red;
+    /* color: red; */
   }
 
   .logo-text {
@@ -203,7 +310,14 @@ iframe {
   }
 
   .heading {
-    padding: 0 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .subheading {
+    font-size: 16px;
+  }
+  .big-button {
+    font-size: 36px;
   }
 
   .hamburger {
@@ -242,88 +356,7 @@ iframe {
 
   /* About me */
   #about-me-description {
-    font-size: 24px;
-  }
-
-  .profile-picture {
-    width: 50%;
-    height: 50%;
-  }
-}
-
-@media (max-width: 1230px) {
-  body {
-    margin: 0 auto;
-  }
-
-  .menu {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: var(--secondary-color);
-
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    border-radius: 5px;
-
-    overflow: hidden;
-    height: 0px;
-    transition: height 0.5s ease;
-  }
-
-  .menu.active {
-    height: 200px;
-  }
-
-  .menu ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    padding: 10px;
-  }
-
-  .heading {
-    padding: 0 0.5rem;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  nav ul {
-    display: none;
-  }
-
-  .landing-page {
-    justify-content: flex-start;
-    height: 100%;
-  }
-
-  iframe {
-    width: 80%;
-    height: 100%;
-  }
-
-  .hero-images {
-    height: 500px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-image {
-    width: 80%;
-    height: 40%;
-  }
-
-  .hero-image:nth-child(2) {
-    display: none;
-  }
-
-  /* About me */
-  #about-me-description {
-    font-size: 24px;
+    font-size: 1rem;
   }
 
   .profile-picture {

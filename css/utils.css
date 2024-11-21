@@ -27,6 +27,10 @@
   font: 400 24px "Merriweather", sans-serif;
 }
 
+.margin-scroll-top {
+  scroll-margin-top: 6rem;
+}
+
 .margin-top-half-1 {
   margin-top: 0.5rem;
 }
